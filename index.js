@@ -41,7 +41,7 @@ function scoreCheck(value, k)
 
 function quizLevelTwo(question)
   {
-    var userAnswer = readlineSync.keyIn(chalk.yellow(question[0]) + "\n" + chalk.cyanBright(question[1]) + "\n" + chalk.cyanBright(question[2]) + "\n" + chalk.cyanBright(question[3]) + "\n" + chalk.cyanBright(question[4]) + "\n", {limit: '$<a-d>'}); 
+    var userAnswer = readlineSync.keyIn(chalk.hex('#e5ff00')(question[0]) + "\n" + chalk.cyanBright(question[1]) + "\n" + chalk.cyanBright(question[2]) + "\n" + chalk.cyanBright(question[3]) + "\n" + chalk.cyanBright(question[4]) + "\n", {limit: '$<a-d>'}); 
     if (userAnswer.toLowerCase() === question[5])
     {
       console.log(chalk.greenBright("Correct!"));
@@ -55,7 +55,7 @@ function quizLevelTwo(question)
   }
 function quizLevelThree(question, answer)
   {
-    var userAnswer = readlineSync.question(chalk.magenta(question) + "\n");
+    var userAnswer = readlineSync.question(chalk.hex('#e5ff00')(question) + "\n");
     if (userAnswer.toUpperCase() === answer.toUpperCase())
     {
       console.log(chalk.greenBright("Correct!"));
@@ -127,5 +127,5 @@ quizLevelThree("WHat is Peggy Carter niece's name? ", "Sharon Carter");
 quizLevelThree("WHat was the name of Thanos's Spaceship ", "Sanctuary 2");
 
 console.log(chalk.bgGreen("Congratulations on completing the quiz!!") + "\n");
-console.log(chalk.bgWhite.black("Your Final Score is:") + " ", chalk.bgGreenBright.black(score));
+console.log(chalk.hex('#00ff77')("Your Final Score is:") + " ", chalk.bgGreenBright.black(score));
 finalScoreCheck(score);
