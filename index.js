@@ -1,7 +1,7 @@
 var readlineSync = require("readline-sync");
 const chalk = require('chalk');
 var userName = readlineSync.question(chalk.greenBright("Hi! Can I have your name please? "));
-console.log("\n" + "Welcome! " + chalk.blue.bold(userName) + ", to the " + chalk.bgRed.bold("MARVEL") + " quiz!" + "\n" + "*drumroll*" + "\n");
+console.log("\n" + "Welcome! " + chalk.blue.bold(userName) + ", to the " + chalk.bgRed.bold.underline("MARVEL") + " quiz!" + "\n" + "*drumroll*" + "\n");
 console.log("Instructions: " + "There are 3 levels of 5 question each: " + "\n" + chalk.yellow.bold("1. Y/N") + "\n" + chalk.cyan.bold("2. KBC") + "\n" + chalk.magenta.bold("3. Q&A") + "\n");
 console.log(chalk.red("Required Score for each level: ") + "\n" + "Level 1: 3" + "\n" + "Level 2: 6" + "\n" + "Level 3: N/A" + "\n");
 
